@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://i30xy83grrrg"]
-
-[ext_resource type="Script" path="res://scenes/options menu/resolution_mode_button.gd" id="1_1r6ky"]
-
-[node name="Resolution_Mode_Button"]
-script = ExtResource("1_1r6ky")
-
-[node name="Label" parent="HBoxContainer" index="0"]
-text = "Resolution"
