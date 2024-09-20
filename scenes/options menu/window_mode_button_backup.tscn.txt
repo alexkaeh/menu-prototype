@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://diikc2iyd4ofx"]
+[ext_resource path="res://scenes/option menu/options_display_button.tscn type="]
+
+
+[node name="Window_Mode_Button"]
+
+[node name="Label" parent="HBoxContainer" index="0"]
+text = "Window Mode"
