@@ -11,13 +11,12 @@ config_version=5
 [application]
 
 config/name="Menu Tutorial"
-run/main_scene="res://scenes/options menu/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="res://scenes/options menu/default_bus_layout.tres"
+buses/default_bus_layout="res://scenes/default_bus_layout.tres"
 
 [input]
 
