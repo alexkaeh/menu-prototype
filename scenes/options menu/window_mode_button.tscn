@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0oih73vo6hgj"]
+
+[ext_resource type="PackedScene" uid="uid://b32ol0v8wuefb" path="res://scenes/options menu/options_display_button.tscn" id="1_toelo"]
+
+[sub_resource type="GDScript" id="GDScript_0pbbu"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Window_Mode_Button" instance=ExtResource("1_toelo")]
+script = SubResource("GDScript_0pbbu")

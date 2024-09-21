@@ -1,4 +1,15 @@
-[gd_scene format=3 uid="uid://d4aqof01djrwx"]
+[gd_scene load_steps=5 format=3 uid="uid://d4aqof01djrwx"]
+
+[ext_resource type="PackedScene" uid="uid://r6k4atcgw0yi" path="res://scenes/options menu/options_menu.tscn" id="1_xmp2w"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i0kqy"]
+load_path = "res://.godot/imported/tile_0014.png-b2793741b8a4ee2ddf33ee089a9c15dc.ctex"
+
+[sub_resource type="SystemFont" id="SystemFont_usugs"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_5wt8c"]
+font_names = PackedStringArray("Impact")
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -9,31 +20,75 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_i0kqy")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 60
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HSeparator"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = SubResource("SystemFont_usugs")
+theme_override_font_sizes/font_size = 64
+text = "GAME TITLE"
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 48
+alignment = 1
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="Start_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_5wt8c")
+theme_override_font_sizes/font_size = 24
+text = "START"
+
+[node name="Options_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_5wt8c")
+theme_override_font_sizes/font_size = 24
+text = "OPTIONS"
+
+[node name="Exit_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_5wt8c")
+theme_override_font_sizes/font_size = 24
+text = "EXIT"
+
+[node name="Options_Menu" parent="." instance=ExtResource("1_xmp2w")]
+visible = false
+layout_mode = 1
