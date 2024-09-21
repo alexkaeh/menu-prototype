@@ -15,3 +15,4 @@ func set_label_text(button_pressed : bool) -> void:
 
 func on_subtitle_toggled(button_pressed : bool) -> void:
 	set_label_text(button_pressed)
+#checkpoint
