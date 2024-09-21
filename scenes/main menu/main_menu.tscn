@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4aqof01djrwx"]
+[gd_scene load_steps=6 format=3 uid="uid://d4aqof01djrwx"]
 
+[ext_resource type="Script" path="res://scenes/main menu/main_menu.gd" id="1_5qu55"]
 [ext_resource type="PackedScene" uid="uid://r6k4atcgw0yi" path="res://scenes/options menu/options_menu.tscn" id="1_xmp2w"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i0kqy"]
@@ -18,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5qu55")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

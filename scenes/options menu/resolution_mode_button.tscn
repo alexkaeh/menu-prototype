@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://wkqrq7kfpogl"]
+
+[ext_resource type="Script" path="res://scenes/options menu/resolution_mode_button.gd" id="1_1r6ky"]
+[ext_resource type="PackedScene" uid="uid://b32ol0v8wuefb" path="res://scenes/options menu/options_display_button.tscn" id="1_g3ffu"]
+
+[node name="Resolution_Mode_Button" instance=ExtResource("1_g3ffu")]
+script = ExtResource("1_1r6ky")
