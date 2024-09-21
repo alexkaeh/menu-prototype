@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfqnynsulhip4"]
+[gd_scene load_steps=6 format=3 uid="uid://cfqnynsulhip4"]
 
+[ext_resource type="PackedScene" uid="uid://d4er7k5ukhluh" path="res://scenes/options menu/audio_slider_settings.tscn" id="1_udcta"]
 [ext_resource type="PackedScene" uid="uid://c0oih73vo6hgj" path="res://scenes/options menu/window_mode_button.tscn" id="2_ykyx5"]
 [ext_resource type="PackedScene" uid="uid://wkqrq7kfpogl" path="res://scenes/options menu/resolution_mode_button.tscn" id="3_4qqro"]
 [ext_resource type="PackedScene" uid="uid://b5300y6vs6cts" path="res://scenes/options menu/hotkey_rebind_button.tscn" id="4_fkoou"]
+[ext_resource type="PackedScene" uid="uid://cfv0by4gvs5ts" path="res://scenes/options menu/subtitle_toggle_button.tscn" id="5_eyb7h"]
 
 [node name="Settings_Tab_Container" type="Control"]
 layout_mode = 3
@@ -40,9 +42,23 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Sound/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer/ScrollContainer"]
 layout_mode = 2
 theme_override_constants/separation = 64
+
+[node name="Audio_Slider_Settings" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_udcta")]
+layout_mode = 2
+
+[node name="Audio_Slider_Settings2" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_udcta")]
+layout_mode = 2
+bus_name = "Music"
+
+[node name="Audio_Slider_Settings3" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_udcta")]
+layout_mode = 2
+bus_name = "SFX"
 
 [node name="Graphics" type="TabBar" parent="TabContainer"]
 visible = false
@@ -130,6 +146,11 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Accessibilty/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Accessibilty/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Accessibilty/MarginContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Subtitle_Toggle_Button" parent="TabContainer/Accessibilty/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_eyb7h")]
+layout_mode = 2

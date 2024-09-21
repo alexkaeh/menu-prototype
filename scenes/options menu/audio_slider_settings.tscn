@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/options menu/audio_slider_settings.gd" id="1_4nd10"]
 
-[node name="Audio_Slider_Settings" type="Control"]
+[node name="Audio_Slider_settings" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
